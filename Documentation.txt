@@ -1,0 +1,5 @@
+Aggiungere il proprio dataset per il training:
+- https://docs.ultralytics.com/it/datasets/classify/#what-datasets-are-supported-by-ultralytics-yolo-for-image-classification
+
+Informazioni generali sul training di un classificatore:
+- https://docs.ultralytics.com/it/tasks/classify/#train
