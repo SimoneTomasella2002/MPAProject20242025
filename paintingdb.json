@@ -1,0 +1,115 @@
+{
+    "paintings":[
+        {
+            "class": "adam",
+            "title": "La Creazione di Adamo",
+            "author": "Michelangelo Buonarroti", 
+            "year": "1511",
+            "dimension": "280x570",
+            "artistic_movement": "Rinascimentale",
+            "location": "Città del vaticano, Musei Vaticani, Cappella Sistina",
+            "style": "Affresco",
+            "subject": "Dio tocca il dito di Adamo",
+            "extra": "Michelangelo ha voluto immortalare così il momento in cui il Creatore sta per entrare in contatto fisico con la sua creatura e trasferire ad Adamo la scintilla della vita. Restaurato nel 1994"
+        },
+        {
+            "class": "am_goth",
+            "title": "American Gothic",
+            "author": "Grant Wood", 
+            "year": "1930",
+            "dimension": "74,3×62,4",
+            "artistic_movement": "Regionalismo Americano",
+            "location": "USA, Chicago, Art Institute of Chicago",
+            "style": "Olio su tela",
+            "subject": "Un agricoltore che regge un forcone insieme a sua figlia" 
+        },
+        {
+            "class": "kiss",
+            "title": "The kiss",
+            "author": "Gustav Klimt", 
+            "year": "1907/1908",
+            "dimension": "180x180",
+            "artistic_movement": "Belle Époque, Arte secessionista viennese",
+            "location": "Austria, Vienna, Österreichische Galerie Belvedere",
+            "style": "Olio su tela",
+            "subject": "Due amanti che si stringono abbandonandosi ad un bacio intenso" 
+        },
+        {
+            "class": "liberty",
+            "title": "Liberty guiding the people",
+            "author": "Eugèene Delacroix", 
+            "year": "1830",
+            "dimension": "260x325",
+            "artistic_movement": "Romanticismo",
+            "location": "Francia, Parigi, Louvre",
+            "style": "Olio su tela",
+            "subject": "Una donna che guida il popolo alla rivolta portando con sè una bandiera francese"
+        },
+        {
+            "class": "monalisa",
+            "title": "La Gioconda",
+            "author": "Leonardo da Vinci", 
+            "year": "1503/1506",
+            "dimension": "77x53",
+            "artistic_movement": "Rinascimentale",
+            "location": "Francia, Parigi, Louvre",
+            "style": "Olio su tavola di pioppo",
+            "subject": "Una donna seduta a mezza figura, con il volto ruotato verso lo spettatore."
+        },
+        {
+            "class": "pearl",
+            "title": "Ragazza con l'orecchino di perla",
+            "author": "Jan Vermeer", 
+            "year": "1665/1666",
+            "dimension": "44,5x39",
+            "artistic_movement": "Secolo d'oro olandese",
+            "location": "Paesi Bassi, L'Aia, Mauritshuis",
+            "style": "Olio su tela",
+            "subject": "Una fanciulla con il volto ruotato verso lo spettatore, con indosso un orecchino a forma di perla, un mantello color ocra e un turbante azzurro"
+        },
+        {
+            "class": "scream",
+            "title": "L'urlo di munch",
+            "author": "Edvard Munch", 
+            "year": "1893",
+            "dimension": "91x73,5",
+            "artistic_movement": "Espressionismo",
+            "location": "Norvegia, Oslo, Museo nazionale di arte, architettura e disegno",
+            "style": "Pittura a olio, tempera, pastello su cartone",
+            "subject": "Un uomo che urla mostrando disperazione e smarrimento come riflessione della condizione umana universale"
+        },
+        {
+            "class": "sunday",
+            "title": "Sunday afternoon on the island of La Grande Jatte",
+            "author": "Georges Seurat", 
+            "year": "1884/1886",
+            "dimension": "207,6x308",
+            "artistic_movement": "Neo-Impressionismo",
+            "location": "USA, Chicago, Art Institute of Chicago",
+            "style": "Olio su tela",
+            "subject": "Persone che si rilassano sulle rive dell'isola de La Grande Jatte, situata poco fuori Parigi"
+        },
+        {
+            "class": "vangogh",
+            "title": "Autoritratto di Vangogh con il cappello di feltro",
+            "author": "Vincent Van Gogh", 
+            "year": "1887/1988",
+            "dimension": "44x37,5",
+            "artistic_movement": "",
+            "location": "Paesi Bassi, Amsterdam, Van Gogh Museum",
+            "style": "Olio su tela",
+            "subject": ""
+        },
+        {
+            "class": "venere",
+            "title": "La nascita di Venere",
+            "author": "Sandro Botticelli", 
+            "year": "1485",
+            "dimension": "172,5x278,5",
+            "artistic_movement": "Rinascimentale",
+            "location": "Italia, Firenze, Galleria degli Uffizi",
+            "style": "Tempera su tela",
+            "subject": "Dipinto ispirato al mito della dea Venere, contrariamente al nome del titolo, questa opera raffigura il suo approdo sull'isola di Cipro"
+        }
+    ]
+}
