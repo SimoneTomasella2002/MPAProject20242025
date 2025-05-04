@@ -56,6 +56,7 @@ def main():
                 cv.imwrite("./temp/frame.jpeg", frame)
                 break
             elif pressedKey == ord('q'):
+                shutil.rmtree("./temp")
                 sys.exit(0)
         
         cam.release()
