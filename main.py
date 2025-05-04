@@ -6,13 +6,12 @@ import cv2 as cv
 from ultralytics import YOLO
 
 def loadModel():
-    trainNumber = 1
+    trainNumber = 2
 
     if os.path.exists("./runs/classify"):
         while os.path.exists(f"./runs/classify/train{trainNumber}"):
-            trainNumber += 1
-            continue
-    
+            trainNumber = trainNumber + 1
+
         if trainNumber == 1:
             return YOLO(f"./runs/classify/train/weights/best.pt")
         else:
@@ -31,7 +30,9 @@ def loadJson():
 
 def main():
     model = loadModel()
-    painting_data = loadJson()
+    paintings = loadJson()["paintings"]
+
+    print(paintings)
 
     if os.path.exists("./temp"):
         shutil.rmtree("./temp")
@@ -62,7 +63,20 @@ def main():
         cam.release()
         cv.destroyAllWindows()
 
-        model("./temp/frame.jpeg")
+        result = model("./temp/frame.jpeg")
+
+        probs_list = result[0].probs.data.tolist()
+        max_prob = max(probs_list)
+        max_index = probs_list.index(max_prob)
+        class_name = model.names[max_index]
+
+        for painting in paintings:
+            if painting["class"] == class_name:
+                print(painting)
+
+                # TODO Connect to an LLM model
+
+                break
         
         
 main()
