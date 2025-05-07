@@ -77,8 +77,8 @@ def main():
                     model = llm_model, 
                     messages = [
                         {
-                            'role': "assistant",
-                            'content': f"You are a museum tour guide. I want you to describe the informations about a specific painting with the following data: Title: {painting["title"]}, Author: {painting["author"]}, Year: {painting["year"]}, Dimension: {painting["dimension"]}, Artistic Movement: {painting["artistic_movement"]}, Current Location: {painting["location"]}, Style: {painting["style"]}, Subject: {painting["subject"]}. Be as descriptive as possible"
+                            'role': "user",
+                            'content': f"You are a museum tour guide. I want you to describe the informations about a specific painting with the following data: Title: {painting["title"]}, Author: {painting["author"]}, Year: {painting["year"]}, Dimension: {painting["dimension"]}, Artistic Movement: {painting["artistic_movement"]}, Current Location: {painting["location"]}, Style: {painting["style"]}, Subject: {painting["subject"]}."
                         }
                     ],
                     stream=True
