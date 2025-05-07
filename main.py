@@ -3,6 +3,7 @@ import sys
 import shutil
 import json as js
 import cv2 as cv
+from ollama import chat, ChatResponse
 from ultralytics import YOLO
 
 def loadModel():
@@ -29,10 +30,9 @@ def loadJson():
         sys.exit(1)
 
 def main():
-    model = loadModel()
+    llm_model = "deepseek-r1:1.5b"
+    class_model = loadModel()
     paintings = loadJson()["paintings"]
-
-    print(paintings)
 
     if os.path.exists("./temp"):
         shutil.rmtree("./temp")
@@ -63,18 +63,31 @@ def main():
         cam.release()
         cv.destroyAllWindows()
 
-        result = model("./temp/frame.jpeg")
+        result = class_model("./temp/frame.jpeg")
 
         probs_list = result[0].probs.data.tolist()
         max_prob = max(probs_list)
         max_index = probs_list.index(max_prob)
-        class_name = model.names[max_index]
+        class_name = class_model.names[max_index]
 
         for painting in paintings:
             if painting["class"] == class_name:
-                print(painting)
 
-                # TODO Connect to an LLM model
+                response: ChatResponse = chat(
+                    model = llm_model, 
+                    messages = [
+                        {
+                            'role': "assistant",
+                            'content': f"You are a museum tour guide. I want you to describe the informations about a specific painting with the following data: Title: {painting["title"]}, Author: {painting["author"]}, Year: {painting["year"]}, Dimension: {painting["dimension"]}, Artistic Movement: {painting["artistic_movement"]}, Current Location: {painting["location"]}, Style: {painting["style"]}, Subject: {painting["subject"]}. Be as descriptive as possible"
+                        }
+                    ],
+                    stream=True
+                )
+
+                for chunk in response:
+                    print(chunk['message']['content'], end='', flush=True)
+
+                print("\n")
 
                 break
         

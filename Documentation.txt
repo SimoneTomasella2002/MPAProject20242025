@@ -3,3 +3,6 @@ Aggiungere il proprio dataset per il training:
 
 Informazioni generali sul training di un classificatore:
 - https://docs.ultralytics.com/it/tasks/classify/#train
+
+Informazioni su come scaricare ollama e deepseek ed usarlo su python:
+- https://medium.com/@4yub1k/deploy-deepseek-locally-the-easy-way-5b1c3d66e531
