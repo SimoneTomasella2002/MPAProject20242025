@@ -1,10 +1,20 @@
 import os
 import sys
 import shutil
+import ffmpeg
 import json as js
 import cv2 as cv
+from gtts import gTTS
 from ollama import chat, ChatResponse
 from ultralytics import YOLO
+
+def checkEnvironmentDeps():
+    extCode = os.system("ffmpeg -version")
+
+    if extCode != 0:
+        print("ffmpeg was not found on your system, please download it!\n")
+        sys.exit(1)
+
 
 def loadModel():
     trainNumber = 2
@@ -29,7 +39,24 @@ def loadJson():
         print("File './paintingdb.json' not found, re-download the repository or download the single file")
         sys.exit(1)
 
+def loadTTS():
+    with open("./temp/tmp.txt") as txtFile:
+        content = txtFile.read()
+                
+        index = content.find("</think>")
+
+        if (index != -1):
+            content = content[index + len("</think>"):].lstrip()
+
+    ttsObj = gTTS(text=content, lang="en", slow=False)
+
+    ttsObj.save("./temp/tmp.mp3")
+
+    os.system("ffplay -v 0 -nodisp -autoexit ./temp/tmp.mp3")
+
 def main():
+    checkEnvironmentDeps()
+
     llm_model = "deepseek-r1:1.5b"
     class_model = loadModel()
     paintings = loadJson()["paintings"]
@@ -84,8 +111,15 @@ def main():
                     stream=True
                 )
 
-                for chunk in response:
-                    print(chunk['message']['content'], end='', flush=True)
+                if os.path.exists("./temp/tmp.txt"):
+                    os.remove("./temp/tmp.txt")
+
+                with open("./temp/tmp.txt", "a") as txtFile:
+                    for chunk in response:
+                        print(chunk['message']['content'], end='', flush=True)
+                        txtFile.write(chunk["message"]["content"])
+
+                loadTTS()
 
                 print("\n")
 
