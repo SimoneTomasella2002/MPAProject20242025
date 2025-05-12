@@ -1,19 +1,14 @@
 import os
 import sys
 import shutil
+import keyboard
+import threading
+import pygame
 import json as js
 import cv2 as cv
 from gtts import gTTS
 from ollama import chat, ChatResponse
 from ultralytics import YOLO
-
-def checkEnvironmentDeps():
-    extCode = os.system("ffmpeg -version")
-
-    if extCode != 0:
-        print("ffmpeg was not found on your system, please download it!\n")
-        sys.exit(1)
-
 
 def loadModel():
     trainNumber = 2
@@ -47,15 +42,33 @@ def loadTTS():
         if (index != -1):
             content = content[index + len("</think>"):].lstrip()
 
+    print("\n\n-- Generating audio --")
+
     ttsObj = gTTS(text=content, lang="en", slow=False)
 
     ttsObj.save("./temp/tmp.mp3")
 
-    os.system("ffplay -v 0 -nodisp -autoexit ./temp/tmp.mp3")
+    print("\n\n-- Audio ready, press x to stop --")
+
+    pygame.mixer.init()
+    pygame.mixer.music.load("./temp/tmp.mp3")
+    pygame.mixer.music.play()
+
+    def stop_on_key():
+        keyboard.wait('x')
+        pygame.mixer.music.stop()
+    
+    listener = threading.Thread(target=stop_on_key)
+    listener.start()
+
+    while pygame.mixer.music.get_busy():
+        pygame.time.Clock().tick(10)
+    
+    listener.join()
+
+    pygame.quit()
 
 def main():
-    checkEnvironmentDeps()
-
     llm_model = "deepseek-r1:1.5b"
     class_model = loadModel()
     paintings = loadJson()["paintings"]
