@@ -1,7 +1,6 @@
 import os
 import sys
 import shutil
-import ffmpeg
 import json as js
 import cv2 as cv
 from gtts import gTTS
