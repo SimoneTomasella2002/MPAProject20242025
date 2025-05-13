@@ -54,17 +54,16 @@ def loadTTS():
     pygame.mixer.music.load("./temp/tmp.mp3")
     pygame.mixer.music.play()
 
-    def stop_on_key():
-        keyboard.wait('x')
-        pygame.mixer.music.stop()
-    
-    listener = threading.Thread(target=stop_on_key)
-    listener.start()
-
-    while pygame.mixer.music.get_busy():
-        pygame.time.Clock().tick(10)
-    
-    listener.join()
+    if (sys.platform == "win32"):
+        while pygame.mixer.music.get_busy():
+            if keyboard.is_pressed('x'):
+                pygame.mixer.music.stop()
+                break
+            pygame.time.Clock().tick(10)
+    else:
+        print("\n\n-- An OS different from Windows has been detected, for now you can't stop the track, in a future update this is going to be addressed --")
+        while pygame.mixer.music.get_busy():
+            pygame.time.Clock().tick(10)
 
     pygame.quit()
 
@@ -117,7 +116,7 @@ def main():
                     messages = [
                         {
                             'role': "user",
-                            'content': f"You are a museum tour guide. I want you to describe the informations about a specific painting with the following data: Title: {painting["title"]}, Author: {painting["author"]}, Year: {painting["year"]}, Dimension: {painting["dimension"]}, Artistic Movement: {painting["artistic_movement"]}, Current Location: {painting["location"]}, Style: {painting["style"]}, Subject: {painting["subject"]}."
+                            'content': f"You are a museum tour guide. I want you to describe the informations about a specific painting with the following data: Title: {painting["title"]}, Author: {painting["author"]}, Year: {painting["year"]}, Dimension: {painting["dimension"]}, Artistic Movement: {painting["artistic_movement"]}, Current Location: {painting["location"]}, Style: {painting["style"]}, Subject: {painting["subject"]}. Only English words are allowed"
                         }
                     ],
                     stream=True
