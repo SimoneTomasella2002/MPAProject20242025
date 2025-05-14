@@ -5,6 +5,7 @@ import keyboard
 import pygame
 import json as js
 import cv2 as cv
+from pynput.keyboard import Listener
 from gtts import gTTS
 from ollama import chat, ChatResponse
 from ultralytics import YOLO
@@ -49,6 +50,7 @@ def loadTTS():
 
     print("\n\n-- Audio ready, press x to stop --")
 
+    pygame.init()
     pygame.mixer.init()
     pygame.mixer.music.load("./temp/tmp.mp3")
     pygame.mixer.music.play()
@@ -60,8 +62,16 @@ def loadTTS():
                 break
             pygame.time.Clock().tick(10)
     else:
-        print("\n\n-- An OS different from Windows has been detected, for now you can't stop the track, in a future update this is going to be addressed --")
+        print("\n\n-- Can't find a better way to achieve the same result on linux, probably going to be addressed in the following revisions --")
+
+        pygame.display.set_mode((1, 1))
+
         while pygame.mixer.music.get_busy():
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_x:
+                        pygame.mixer.music.stop()
+                        break
             pygame.time.Clock().tick(10)
 
     pygame.quit()
