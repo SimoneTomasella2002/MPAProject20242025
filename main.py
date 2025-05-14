@@ -2,7 +2,6 @@ import os
 import sys
 import shutil
 import keyboard
-import threading
 import pygame
 import json as js
 import cv2 as cv
