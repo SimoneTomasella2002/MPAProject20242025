@@ -10,20 +10,35 @@ from gtts import gTTS
 from ollama import chat, ChatResponse
 from ultralytics import YOLO
 
+# Expected models named something like:
+# 
+# - train
+# - train2
+# - train3
+# - ...
 def loadModel():
+    
     trainNumber = 2
 
     if os.path.exists("./runs/classify"):
+        
+        # Caricamento modello "train" se non esiste un modello numerato dal 2 in su 
+        if not os.path.exists(f"./runs/classify/train{trainNumber}"):
+            print("Loading ./runs/classify/train/weights/best.pt")
+            return YOLO(f"./runs/classify/train/weights/best.pt")
+
+        # Caricamento ultimo modello disponibile numerato
+        # Continuo a incrementare finché esistono modelli numerati + 1
         while os.path.exists(f"./runs/classify/train{trainNumber}"):
             trainNumber = trainNumber + 1
 
-        if trainNumber == 1:
-            return YOLO(f"./runs/classify/train/weights/best.pt")
-        else:
-            return YOLO(f"./runs/classify/train{trainNumber-1}/weights/best.pt")
-    else:
+        print(f"Loading ./runs/classify/train{trainNumber-1}/weights/best.pt")
+        return YOLO(f"./runs/classify/train{trainNumber-1}/weights/best.pt")
+
+    else: 
         print("No model were found under directory './runs/classify', train one with ultralytics YOLO")
         sys.exit(1)
+
 
 def loadJson():
     try:
