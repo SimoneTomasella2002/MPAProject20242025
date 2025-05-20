@@ -23,13 +23,13 @@ def loadModel():
 
     if os.path.exists("./runs/classify"):
         
-        # Caricamento modello "train" se non esiste un modello numerato dal 2 in su 
+        # Loading "train" model if a model numbered from 2 to above does not exist 
         if not os.path.exists(f"./runs/classify/train{trainNumber}"):
             print("Loading ./runs/classify/train/weights/best.pt")
             return YOLO(f"./runs/classify/train/weights/best.pt")
 
-        # Caricamento ultimo modello disponibile numerato
-        # Continuo a incrementare finché esistono modelli numerati + 1
+        # Loading last numbered model available
+        # Keep to increment until there are numbered model + 1
         while os.path.exists(f"./runs/classify/train{trainNumber}"):
             trainNumber = trainNumber + 1
 
