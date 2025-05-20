@@ -1,115 +1,115 @@
 {
-    "paintings":[
-        {
-            "class": "adam",
-            "title": "La Creazione di Adamo",
-            "author": "Michelangelo Buonarroti", 
-            "year": "1511",
-            "dimension": "280x570",
-            "artistic_movement": "Rinascimentale",
-            "location": "Città del vaticano, Musei Vaticani, Cappella Sistina",
-            "style": "Affresco",
-            "subject": "Dio tocca il dito di Adamo",
-            "extra": "Michelangelo ha voluto immortalare così il momento in cui il Creatore sta per entrare in contatto fisico con la sua creatura e trasferire ad Adamo la scintilla della vita. Restaurato nel 1994"
-        },
-        {
-            "class": "am_goth",
-            "title": "American Gothic",
-            "author": "Grant Wood", 
-            "year": "1930",
-            "dimension": "74,3×62,4",
-            "artistic_movement": "Regionalismo Americano",
-            "location": "USA, Chicago, Art Institute of Chicago",
-            "style": "Olio su tela",
-            "subject": "Un agricoltore che regge un forcone insieme a sua figlia" 
-        },
-        {
-            "class": "kiss",
-            "title": "The kiss",
-            "author": "Gustav Klimt", 
-            "year": "1907/1908",
-            "dimension": "180x180",
-            "artistic_movement": "Belle Époque, Arte secessionista viennese",
-            "location": "Austria, Vienna, Österreichische Galerie Belvedere",
-            "style": "Olio su tela",
-            "subject": "Due amanti che si stringono abbandonandosi ad un bacio intenso" 
-        },
-        {
-            "class": "liberty",
-            "title": "Liberty leading the people",
-            "author": "Eugèene Delacroix", 
-            "year": "1830",
-            "dimension": "260x325",
-            "artistic_movement": "Romanticismo",
-            "location": "Francia, Parigi, Louvre",
-            "style": "Olio su tela",
-            "subject": "Una donna che guida il popolo alla rivolta portando con sè una bandiera francese"
-        },
-        {
-            "class": "monalisa",
-            "title": "La Gioconda",
-            "author": "Leonardo da Vinci", 
-            "year": "1503/1506",
-            "dimension": "77x53",
-            "artistic_movement": "Rinascimentale",
-            "location": "Francia, Parigi, Louvre",
-            "style": "Olio su tavola di pioppo",
-            "subject": "Una donna seduta a mezza figura, con il volto ruotato verso lo spettatore."
-        },
-        {
-            "class": "pearl",
-            "title": "Ragazza con l'orecchino di perla",
-            "author": "Jan Vermeer", 
-            "year": "1665/1666",
-            "dimension": "44,5x39",
-            "artistic_movement": "Secolo d'oro olandese",
-            "location": "Paesi Bassi, L'Aia, Mauritshuis",
-            "style": "Olio su tela",
-            "subject": "Una fanciulla con il volto ruotato verso lo spettatore, con indosso un orecchino a forma di perla, un mantello color ocra e un turbante azzurro"
-        },
-        {
-            "class": "scream",
-            "title": "L'urlo",
-            "author": "Edvard Munch", 
-            "year": "1893",
-            "dimension": "91x73,5",
-            "artistic_movement": "Espressionismo",
-            "location": "Norvegia, Oslo, Museo nazionale di arte, architettura e disegno",
-            "style": "Pittura a olio, tempera, pastello su cartone",
-            "subject": "Un uomo che urla mostrando disperazione e smarrimento come riflessione della condizione umana universale"
-        },
-        {
-            "class": "sunday",
-            "title": "Sunday afternoon on the island of La Grande Jatte",
-            "author": "Georges Seurat", 
-            "year": "1884/1886",
-            "dimension": "207,6x308",
-            "artistic_movement": "Neo-Impressionismo",
-            "location": "USA, Chicago, Art Institute of Chicago",
-            "style": "Olio su tela",
-            "subject": "Persone che si rilassano sulle rive dell'isola de La Grande Jatte, situata poco fuori Parigi"
-        },
-        {
-            "class": "vangogh",
-            "title": "Autoritratto con il cappello di feltro grigio",
-            "author": "Vincent Van Gogh", 
-            "year": "1887/1988",
-            "dimension": "44x37,5",
-            "artistic_movement": "Post-impressionismo",
-            "location": "Paesi Bassi, Amsterdam, Van Gogh Museum",
-            "style": "Olio su tela",
-            "subject": "Un uomo con cappello di feltro grigio"
-        },
-        {
-            "class": "venere",
-            "title": "La nascita di Venere",
-            "author": "Sandro Botticelli", 
-            "year": "1485",
-            "dimension": "172,5x278,5",
-            "artistic_movement": "Rinascimentale",
-            "location": "Italia, Firenze, Galleria degli Uffizi",
-            "style": "Tempera su tela",
-            "subject": "Dipinto ispirato al mito della dea Venere, contrariamente al nome del titolo, questa opera raffigura il suo approdo sull'isola di Cipro"
-        }
-    ]
+  "paintings": [
+    {
+      "class": "adam",
+      "title": "The Creation of Adam",
+      "author": "Michelangelo Buonarroti",
+      "year": "1511",
+      "dimension": "280x570",
+      "artistic_movement": "Renaissance",
+      "location": "Vatican City, Vatican Museums, Sistine Chapel",
+      "style": "Fresco",
+      "subject": "God touching Adam’s finger",
+      "extra": "Michelangelo wanted to immortalize the moment when the Creator is about to physically touch his creature and transfer the spark of life to Adam. Restored in 1994"
+    },
+    {
+      "class": "am_goth",
+      "title": "American Gothic",
+      "author": "Grant Wood",
+      "year": "1930",
+      "dimension": "74.3×62.4",
+      "artistic_movement": "American Regionalism",
+      "location": "USA, Chicago, Art Institute of Chicago",
+      "style": "Oil on canvas",
+      "subject": "A farmer holding a pitchfork next to his daughter"
+    },
+    {
+      "class": "kiss",
+      "title": "The Kiss",
+      "author": "Gustav Klimt",
+      "year": "1907/1908",
+      "dimension": "180x180",
+      "artistic_movement": "Belle Époque, Viennese Secession Art",
+      "location": "Austria, Vienna, Österreichische Galerie Belvedere",
+      "style": "Oil on canvas",
+      "subject": "Two lovers embracing in an intense kiss"
+    },
+    {
+      "class": "liberty",
+      "title": "Liberty Leading the People",
+      "author": "Eugène Delacroix",
+      "year": "1830",
+      "dimension": "260x325",
+      "artistic_movement": "Romanticism",
+      "location": "France, Paris, Louvre",
+      "style": "Oil on canvas",
+      "subject": "A woman leading the people to revolt while carrying a French flag"
+    },
+    {
+      "class": "monalisa",
+      "title": "The Mona Lisa",
+      "author": "Leonardo da Vinci",
+      "year": "1503/1506",
+      "dimension": "77x53",
+      "artistic_movement": "Renaissance",
+      "location": "France, Paris, Louvre",
+      "style": "Oil on poplar panel",
+      "subject": "A half-length seated woman, with her face turned toward the viewer"
+    },
+    {
+      "class": "pearl",
+      "title": "Girl with a Pearl Earring",
+      "author": "Jan Vermeer",
+      "year": "1665/1666",
+      "dimension": "44.5x39",
+      "artistic_movement": "Dutch Golden Age",
+      "location": "Netherlands, The Hague, Mauritshuis",
+      "style": "Oil on canvas",
+      "subject": "A young girl with her face turned toward the viewer, wearing a pearl earring, an ochre-colored cloak, and a blue turban"
+    },
+    {
+      "class": "scream",
+      "title": "The Scream",
+      "author": "Edvard Munch",
+      "year": "1893",
+      "dimension": "91x73.5",
+      "artistic_movement": "Expressionism",
+      "location": "Norway, Oslo, National Museum of Art, Architecture and Design",
+      "style": "Oil, tempera, and pastel on cardboard",
+      "subject": "A man screaming in despair and confusion as a reflection of the universal human condition"
+    },
+    {
+      "class": "sunday",
+      "title": "Sunday Afternoon on the Island of La Grande Jatte",
+      "author": "Georges Seurat",
+      "year": "1884/1886",
+      "dimension": "207.6x308",
+      "artistic_movement": "Neo-Impressionism",
+      "location": "USA, Chicago, Art Institute of Chicago",
+      "style": "Oil on canvas",
+      "subject": "People relaxing on the banks of the island of La Grande Jatte, just outside Paris"
+    },
+    {
+      "class": "vangogh",
+      "title": "Self-Portrait with Grey Felt Hat",
+      "author": "Vincent Van Gogh",
+      "year": "1887/1888",
+      "dimension": "44x37.5",
+      "artistic_movement": "Post-Impressionism",
+      "location": "Netherlands, Amsterdam, Van Gogh Museum",
+      "style": "Oil on canvas",
+      "subject": "A man with a grey felt hat"
+    },
+    {
+      "class": "venere",
+      "title": "The Birth of Venus",
+      "author": "Sandro Botticelli",
+      "year": "1485",
+      "dimension": "172.5x278.5",
+      "artistic_movement": "Renaissance",
+      "location": "Italy, Florence, Uffizi Gallery",
+      "style": "Tempera on canvas",
+      "subject": "Painting inspired by the myth of the goddess Venus; despite the title, the work depicts her arrival on the island of Cyprus"
+    }
+  ]
 }
