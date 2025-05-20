@@ -36,7 +36,7 @@
         },
         {
             "class": "liberty",
-            "title": "Liberty guiding the people",
+            "title": "Liberty leading the people",
             "author": "Eugèene Delacroix", 
             "year": "1830",
             "dimension": "260x325",
@@ -69,7 +69,7 @@
         },
         {
             "class": "scream",
-            "title": "L'urlo di munch",
+            "title": "L'urlo",
             "author": "Edvard Munch", 
             "year": "1893",
             "dimension": "91x73,5",
@@ -91,14 +91,14 @@
         },
         {
             "class": "vangogh",
-            "title": "Autoritratto di Vangogh con il cappello di feltro",
+            "title": "Autoritratto con il cappello di feltro grigio",
             "author": "Vincent Van Gogh", 
             "year": "1887/1988",
             "dimension": "44x37,5",
-            "artistic_movement": "",
+            "artistic_movement": "Post-impressionismo",
             "location": "Paesi Bassi, Amsterdam, Van Gogh Museum",
             "style": "Olio su tela",
-            "subject": ""
+            "subject": "Un uomo con cappello di feltro grigio"
         },
         {
             "class": "venere",
