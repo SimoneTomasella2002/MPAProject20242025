@@ -16,6 +16,7 @@ from ultralytics import YOLO
 # - train2
 # - train3
 # - ...
+# Search for and load the latest model generated based on the number
 def loadModel():
     
     trainNumber = 2
@@ -39,7 +40,7 @@ def loadModel():
         print("No model were found under directory './runs/classify', train one with ultralytics YOLO")
         sys.exit(1)
 
-
+# Transform the JSON into an object so it can be iterated over
 def loadJson():
     try:
         with open("./paintingdb.json") as js_file:
@@ -48,6 +49,7 @@ def loadJson():
         print("File './paintingdb.json' not found, re-download the repository or download the single file")
         sys.exit(1)
 
+# Generate and play audio
 def loadTTS():
     with open("./temp/tmp.txt") as txtFile:
         content = txtFile.read()
@@ -96,6 +98,7 @@ def main():
     class_model = loadModel()
     paintings = loadJson()["paintings"]
 
+    # temp contains the captured image and the generated audio
     if os.path.exists("./temp"):
         shutil.rmtree("./temp")
     os.mkdir("./temp")
@@ -127,6 +130,7 @@ def main():
 
         result = class_model("./temp/frame.jpeg")
 
+        # The class name is taken from the overall probabilities
         probs_list = result[0].probs.data.tolist()
         max_prob = max(probs_list)
         max_index = probs_list.index(max_prob)
