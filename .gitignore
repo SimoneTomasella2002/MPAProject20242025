@@ -1,6 +1,9 @@
 temp
+
 .ipynb_checkpoints
 
 ./dataset/test.cache
 ./dataset/train.cache
 ./dataset/val.cache
+
+yolo11n-cls.pt
