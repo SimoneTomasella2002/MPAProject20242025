@@ -4,7 +4,7 @@ Final project for "Predictive Methods for Businesses" at Università di Genova, 
 
 ## Authors
 - Simone Tomasella (5311626)
-- Siria Zuddas (code unknown)
+- Siria Zuddas (5569720)
 
 ## Description
 This project aims to recognize 10 different paintings along with their parodies and community-made versions by identifying common visual features. After detecting the painting, it infers the class (e.g., a parody of the Mona Lisa is categorized as Mona Lisa), then uses Ollama running an LLM (DeepSeek R1 1.5B) to generate a description of the original painting and gTTS to produce a spoken explanation.
