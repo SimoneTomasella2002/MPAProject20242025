@@ -1,0 +1,10 @@
+keyboard
+pygame
+opencv-contrib-python
+pynput
+gTTS
+ollama
+ultralytics
+Pillow
+numpy
+scikit-image

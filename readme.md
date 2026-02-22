@@ -21,3 +21,77 @@ This project aims to recognize 10 different paintings along with their parodies 
 2. Infer which painting it represents.
 3. Describe it using the LLM.
 4. Convert the text description to speech.
+
+## Environment Setup (venv + dependencies)
+
+### 1) Create the virtual environment
+
+Linux/macOS:
+
+```bash
+python3 -m venv .venv
+```
+
+Windows (PowerShell):
+
+```powershell
+python -m venv .venv
+```
+
+### 2) Activate the virtual environment
+
+Linux/macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+Windows (PowerShell):
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### 3) Install required libraries
+
+After activation, install all project dependencies from `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4) (Optional) Verify installation
+
+```bash
+pip list
+```
+
+### 5) Deactivate when finished
+
+```bash
+deactivate
+```
+
+## Ollama Setup (Required)
+
+This project requires Ollama to be installed and running, otherwise the app cannot generate painting descriptions.
+
+### 1) Install Ollama
+
+Download and install Ollama from:
+
+- https://ollama.com/download
+
+### 2) Download the required model (only first time)
+
+```bash
+ollama pull deepseek-r1:1.5b
+```
+
+### 3) Start Ollama every time before running this project
+
+```bash
+ollama serve
+```
+
+Keep this process running while using the app.
